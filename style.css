@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(224, 224, 224);
+}
+
+.container {
+  width: 75vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  & .card {
+    border-radius: 0 20px 0 20px;
+    border-left: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    padding: 1rem;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+
+    & .logo {
+      width: 200px;
+      position: relative;
+      opacity: 0;
+      & img {
+        position: absolute;
+        transform: translate(300px, -70px);
+        width: 100%;
+      }
+    }
+
+    & h2 {
+      font-size: 30px;
+    }
+
+    & .car-img {
+      width: 150%;
+      transform: translate(-10%, 55px);
+      & img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  & .RB {
+    & .logo {
+      width: 300px;
+      & img {
+        transform: translate(230px, -90px);
+      }
+    }
+  }
+
+  & .mclaren {
+    & .logo {
+      width: 300px;
+      & img {
+        transform: translate(200px, -140px);
+      }
+    }
+  }
+}
+
+.card:hover {
+  backdrop-filter: blur(50px);
+  transition: 0.2s ease-out;
+
+  & .logo {
+    opacity: 0.3;
+  }
+
+  & .car-img {
+    width: 180%;
+    transform: translate(-6%, 55px);
+    transition: 0.2s ease-out;
+  }
+}
+
+.RB:hover {
+  background-color: rgba(2, 2, 141, 0.7);
+}
+
+.mclaren:hover {
+  background-color: rgba(207, 70, 21, 0.7);
+}
+
+.ferrari:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.mercedes:hover {
+  background-color: rgba(37, 243, 209, 0.7);
+}
